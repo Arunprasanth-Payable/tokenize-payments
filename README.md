@@ -48,7 +48,7 @@ You can simply use an HTML Form to submit the below params to Payable Payment Ga
 
 * `isSaveCard` - Set to "1" to save card for future use
 * `doFirstPayment` - Set to "1" to charge immediately
-* `customerRefNo` - Customer reference number for tokenization
+* `customerRefNo` - Customer reference number for tokenization (Alpha Numeric Only)
 
 **1.3.** Payment type Parameters: Following parameters are required if the payment type is 2
 
@@ -158,9 +158,9 @@ const payment = {
     billingAddressPostcodeZip: "10000",
     amount: "100.00",
     currencyCode: "LKR",
-    paymentType: "1",
+    paymentType: "3",
     isSaveCard: "1", // Save card for future use
-    customerRefNo: "CUST_123456789", // Customer reference for tokenization
+    customerRefNo: "CUST123456789", // Customer reference for tokenization
     doFirstPayment: "1" // Charge immediately
 };
 ```
@@ -488,7 +488,7 @@ If the customer made the payment by VISA or MASTER credit/debit card, following 
     <input type="hidden" name="currencyCode" value="LKR" />
     <input type="hidden" name="paymentType" value="1" />
     <input type="hidden" name="isSaveCard" value="1" />
-    <input type="hidden" name="customerRefNo" value="CUST_123456789" />
+    <input type="hidden" name="customerRefNo" value="CUST123456789" />
     <input type="hidden" name="doFirstPayment" value="1" />
     
     <button type="submit">Pay & Save Card</button>
@@ -527,7 +527,7 @@ const TokenizePayment = () => {
             currencyCode: "LKR",
             paymentType: "1", // One-time payment
             isSaveCard: "1", // Save card for future use
-            customerRefNo: "CUST_123456789",
+            customerRefNo: "CUST123456789",
             doFirstPayment: "1" // Charge immediately
         };
 
